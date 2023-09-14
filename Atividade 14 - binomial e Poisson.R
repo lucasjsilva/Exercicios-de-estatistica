@@ -1,13 +1,13 @@
 # Primeiramente, vamos importar os dados a serem usados
 dados <- read.csv("Irlanda.csv")
-# a coluna que nos interessa é a última, a qual contem os resultados
+# a coluna que nos interessa ï¿½ a ï¿½ltima, a qual contem os resultados
 resultados <- dados$Res
 
-'1 - Total de elementos '
+'1 - Total de elementos ' 
 N <- length(resultados)
 print(N)
 
-'2 - número médio de gols marcados pelo mandante e pelo visitante
+'2 - nï¿½mero mï¿½dio de gols marcados pelo mandante e pelo visitante
      com suas respectivas incertezas.'
 med_mandante <- mean(dados$HG)
 sd_mandante <- sd(dados$HG)
@@ -56,7 +56,7 @@ for (i in 1:N) {
       
 }
 contadores <- c(cont_0, cont_1, cont_2, cont_3, cont_4, cont_5, cont_6)
-# as incertezas serão calculadas pela binomial
+# as incertezas serï¿½o calculadas pela binomial
 sd_c0 <- sqrt(cont_0*(1-(cont_0/N)))
 sd_c1 <- sqrt(cont_1*(1-(cont_1/N)))
 sd_c2 <- sqrt(cont_2*(1-(cont_2/N)))
@@ -65,7 +65,7 @@ sd_c4 <- sqrt(cont_4*(1-(cont_4/N)))
 sd_c5 <- sqrt(cont_5*(1-(cont_5/N)))
 sd_c6 <- sqrt(cont_6*(1-(cont_6/N)))
 incertezas_c <- c(sd_c0, sd_c1, sd_c2, sd_c3, sd_c4, sd_c5, sd_c6)
-# calculo agora as frequências relativas
+# calculo agora as frequï¿½ncias relativas
 frel_0 <- cont_0/N
 frel_1 <- cont_1/N
 frel_2 <- cont_2/N
@@ -74,7 +74,7 @@ frel_4 <- cont_4/N
 frel_5 <- cont_5/N
 frel_6 <- cont_6/N
 frequencias <- c(frel_0, frel_1, frel_2, frel_3, frel_4, frel_5, frel_6)
-#as incertezas das frequências vão ser dadas por:
+#as incertezas das frequï¿½ncias vï¿½o ser dadas por:
 sd_f0 <- sd_c0/N
 sd_f1 <- sd_c1/N
 sd_f2 <- sd_c2/N
@@ -133,7 +133,7 @@ for (i in 1:N) {
       
 }
 contadores <- c(cont0, cont1, cont2, cont3, cont4, cont5, cont6)
-# as incertezas serão calculadas pela binomial
+# as incertezas serï¿½o calculadas pela binomial
 sdc0 <- sqrt(cont0*(1-(cont0/N)))
 sdc1 <- sqrt(cont1*(1-(cont1/N)))
 sdc2 <- sqrt(cont2*(1-(cont2/N)))
@@ -142,7 +142,7 @@ sdc4 <- sqrt(cont4*(1-(cont4/N)))
 sdc5 <- sqrt(cont5*(1-(cont5/N)))
 sdc6 <- sqrt(cont6*(1-(cont6/N)))
 incertezas_c <- c(sdc0, sdc1, sdc2, sdc3, sdc4, sdc5, sdc6)
-# calculo agora as frequências relativas
+# calculo agora as frequï¿½ncias relativas
 frel0 <- cont0/N
 frel1 <- cont1/N
 frel2 <- cont2/N
@@ -151,7 +151,7 @@ frel4 <- cont4/N
 frel5 <- cont5/N
 frel6 <- cont6/N
 frequencias <- c(frel0, frel1, frel2, frel3, frel4, frel5, frel6)
-# as incertezas das frequências vão ser dadas por:
+# as incertezas das frequï¿½ncias vï¿½o ser dadas por:
 sdf0 <- sdc0/N
 sdf1 <- sdc1/N
 sdf2 <- sdc2/N
@@ -182,7 +182,7 @@ sdP_AG <- sqrt(med_visitante)
 print(sdP_HG)
 print(sdP_AG)
 
-'6 - Valor médio da soma e sua incerteza'
+'6 - Valor mï¿½dio da soma e sua incerteza'
 T_soma <- dados$HG + dados$AG
 T_med <- mean(T_soma)
 T_sd <- sd(T_soma)
